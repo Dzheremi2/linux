@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo ""
+echo "Checking for Zenity availability"
+sudo dnf install zenity
+
 if zenity --question --text "Installing the best YTmusic client ever?"
 then
 sh YTM.sh
