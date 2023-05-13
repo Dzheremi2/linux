@@ -4,6 +4,13 @@ echo ""
 echo "Checking for Zenity availability"
 sudo dnf install zenity
 
+if zenity --question --text "Add RPMfusion repositories?"
+then
+sh rpmfusion.sh
+else
+zenity --info --text "Okay"
+fi
+
 if zenity --question --text "Installing the best YTmusic client ever?"
 then
 sh YTM.sh
