@@ -6,6 +6,7 @@ version=$(grep --only-matching '<span class="css-truncate css-truncate-target te
 echo "$version"
 
 wget https://github.com/th-ch/youtube-music/releases/download/$version/youtube-music-${version//v}.x86_64.rpm 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="Downloading File..."
+sudo dnf remove youtube-music -y
 sudo rpm --install youtube-music-${version//v}.x86_64.rpm
 zenity --info --text "Everything seccesfully installed, maybe..."
 
