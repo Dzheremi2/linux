@@ -39,4 +39,11 @@ else
 zenity --info --text "Okay"
 fi
 
-find . -type f -not -name '*.sh' -delete
+if zenity --question --text "Best browser ever - Vivaldi?"
+then
+sh vivaldi.sh
+else
+zenity --info --text "Okay"
+fi
+
+#find . -type f -not -name '*.sh' -delete
