@@ -1,8 +1,9 @@
 #!/bin/sh
 
-sudo dnf install dnf-utils -y
-sudo dnf config-manager --add-repo https://repo.vivaldi.com/archive/vivaldi-fedora.repo
+sudo chown $USER vivaldi.repo
+sudo cp vivaldi.repo /etc/yum.repos.d/
+sudo dnf update
 
-sudo dnf install vivaldi-stable
+sudo dnf install vivaldi
 
 zenity --info --text "Everything done seccesfully, maybe..."
