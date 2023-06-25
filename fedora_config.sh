@@ -46,4 +46,11 @@ else
 zenity --info --text "Okay"
 fi
 
+if zenity --question --text "VSCode repo and install?"
+then
+sh vscode.sh
+else
+zenity --info --text "Okay"
+fi
+
 #find . -type f -not -name '*.sh' -delete
