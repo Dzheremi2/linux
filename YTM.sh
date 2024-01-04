@@ -10,3 +10,7 @@ sudo dnf remove youtube-music -y
 sudo rpm --install youtube-music-${version//v}.x86_64.rpm
 zenity --info --text "Everything seccesfully installed, maybe..."
 
+version_app=youtube-music-${version//v}.x86_64.rpm
+
+find . -type f -name $version_app -delete
+find . -type f -name youtube-music -delete
