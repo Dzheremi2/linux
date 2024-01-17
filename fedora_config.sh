@@ -53,4 +53,9 @@ else
 zenity --info --text "Okay"
 fi
 
-#find . -type f -not -name '*.sh' -delete
+if zenity --question --text "Use Alt + Shift for changing languages?"
+then
+sh alt_shift.sh
+else
+zenity --info --text "Okay"
+fi
